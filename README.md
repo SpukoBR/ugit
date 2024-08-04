@@ -28,6 +28,6 @@ O **ugit** segue a lógica básica do Git, porém, de forma simplificada, para q
 - Python 3.x
 - Bibliotecas padrão do Python
 
-## Base de conhecimento
+## Agradecimentos
 
 A todos que contribuem para o aprendizado e o desenvolvimento de ferramentas educacionais como o [**ugit**](https://www.leshenko.net/p/ugit/).
