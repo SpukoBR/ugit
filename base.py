@@ -7,6 +7,8 @@ def write_tree(directory='.'):
     with os.scandir(directory) as it:
         for entry in it:
             full = f'{directory}/{entry.name}'
+            if is_ignored(full):
+                continue
             if entry.is_file(follow_symlinks=False):
                 with open(full, 'rb') as f:
                     oid = data.hash_object(f.read())
@@ -29,3 +31,6 @@ def write_tree(directory='.'):
     tree_oid = data.hash_object(tree.encode(), 'tree')
     print(f'Tree object created with OID {tree_oid}')
     return tree_oid
+
+def is_ignored(path):
+    return '.ugit' in path.split ('/')
